@@ -52,7 +52,12 @@ POSSIBILITY OF SUCH DAMAGE.
     Specs from:
     http://www.asus.com/Multimedia/Xtion_PRO_LIVE/#specifications
     -->
-  <link name="base_footprint"/>
+  <link name="base_footprint">
+    <inertial>
+      <mass value="0.01"/><!-- 0.0 does not work on pybyllet -->
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
   <joint name="base_footprint_joint" type="fixed">
     <parent link="base_footprint"/>
     <child link="base_link"/>
@@ -266,6 +271,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <child link="base_range_sensor_link"/>
   </joint>
   <link name="base_range_sensor_link">
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
     <visual>
       <geometry>
         <mesh filename="package://hsr_meshes/meshes/sensors/laser.dae"/>
@@ -308,7 +317,12 @@ POSSIBILITY OF SUCH DAMAGE.
     <parent link="base_link"/>
     <child link="base_imu_frame"/>
   </joint>
-  <link name="base_imu_frame"/>
+  <link name="base_imu_frame">
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
   <gazebo reference="base_imu_frame">
     <sensor name="base_imu" type="imu">
       <update_rate>10.0</update_rate>
@@ -546,6 +560,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <child link="head_l_stereo_camera_link"/>
   </joint>
   <link name="head_l_stereo_camera_link">
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/>
       <geometry>
@@ -558,7 +576,12 @@ POSSIBILITY OF SUCH DAMAGE.
     <parent link="head_l_stereo_camera_link"/>
     <child link="head_l_stereo_camera_gazebo_frame"/>
   </joint>
-  <link name="head_l_stereo_camera_gazebo_frame"/>
+  <link name="head_l_stereo_camera_gazebo_frame">
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
   <gazebo reference="head_l_stereo_camera_gazebo_frame">
     <sensor name="head_l_stereo_camera" type="camera">
       <update_rate>4.0</update_rate>
@@ -602,6 +625,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <child link="head_r_stereo_camera_link"/>
   </joint>
   <link name="head_r_stereo_camera_link">
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/>
       <geometry>
@@ -614,7 +641,12 @@ POSSIBILITY OF SUCH DAMAGE.
     <parent link="head_r_stereo_camera_link"/>
     <child link="head_r_stereo_camera_gazebo_frame"/>
   </joint>
-  <link name="head_r_stereo_camera_gazebo_frame"/>
+  <link name="head_r_stereo_camera_gazebo_frame">
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
   <gazebo reference="head_r_stereo_camera_gazebo_frame">
     <sensor name="head_r_stereo_camera" type="camera">
       <update_rate>4.0</update_rate>
@@ -657,13 +689,23 @@ POSSIBILITY OF SUCH DAMAGE.
     <parent link="head_tilt_link"/>
     <child link="head_center_camera_frame"/>
   </joint>
-  <link name="head_center_camera_frame"/>
+  <link name="head_center_camera_frame">
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
   <joint name="head_center_camera_gazebo_frame_joint" type="fixed">
     <origin rpy="1.5707963268 -1.5707963268 0.0" xyz="0 0 0"/>
     <parent link="head_center_camera_frame"/>
     <child link="head_center_camera_gazebo_frame"/>
   </joint>
-  <link name="head_center_camera_gazebo_frame"/>
+  <link name="head_center_camera_gazebo_frame">
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
   <gazebo reference="head_center_camera_gazebo_frame">
     <sensor name="head_center_camera" type="camera">
       <update_rate>10.0</update_rate>
@@ -707,6 +749,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <child link="head_rgbd_sensor_link"/>
   </joint>
   <link name="head_rgbd_sensor_link">
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
     <visual>
       <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/>
       <geometry>
@@ -728,7 +774,12 @@ POSSIBILITY OF SUCH DAMAGE.
   
         `
         
-  <link name="head_rgbd_sensor_gazebo_frame"/>
+  <link name="head_rgbd_sensor_gazebo_frame">
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
   <gazebo reference="head_rgbd_sensor_gazebo_frame">
     <sensor name="openni_camera_camera" type="depth">
       <always_on>0</always_on>
@@ -1027,7 +1078,12 @@ POSSIBILITY OF SUCH DAMAGE.
     <parent link="wrist_roll_link"/>
     <child link="wrist_ft_sensor_frame"/>
   </joint>
-  <link name="wrist_ft_sensor_frame"/>
+  <link name="wrist_ft_sensor_frame">
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
   <gazebo reference="wrist_roll_joint">
     <provideFeedback>true</provideFeedback>
   </gazebo>
@@ -1324,13 +1380,23 @@ POSSIBILITY OF SUCH DAMAGE.
     <parent link="hand_palm_link"/>
     <child link="hand_camera_frame"/>
   </joint>
-  <link name="hand_camera_frame"/>
+  <link name="hand_camera_frame">
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
   <joint name="hand_camera_gazebo_frame_joint" type="fixed">
     <origin rpy="1.5707963268 -1.5707963268 0" xyz="0 0 0"/>
     <parent link="hand_camera_frame"/>
     <child link="hand_camera_gazebo_frame"/>
   </joint>
-  <link name="hand_camera_gazebo_frame"/>
+  <link name="hand_camera_gazebo_frame">
+    <inertial>
+      <mass value="0.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+    </inertial>
+  </link>
   <gazebo reference="hand_camera_gazebo_frame">
     <sensor name="hand_camera" type="camera">
       <update_rate>10.0</update_rate>
