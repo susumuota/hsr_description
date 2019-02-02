@@ -93,7 +93,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <joint name="base_roll_joint" type="continuous">
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0.0 0.0 1.0"/>
-    <limit effort="34.46" velocity="2.5"/>
+    <limit effort="34.46" lower="-3.14159" upper="3.14159" velocity="2.5"/>
     <parent link="base_link"/>
     <child link="base_roll_link"/>
     <dynamics damping="0.7"/>
@@ -888,7 +888,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <joint name="arm_lift_joint" type="prismatic">
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.340"/>
     <axis xyz="0.0 0.0 1.0"/>
-    <limit effort="100.0" lower="0.0" upper="0.69" velocity="0.2"/>
+    <limit effort="100.0" lower="0.0" upper="0.3" velocity="0.2"/>
     <parent link="base_link"/>
     <child link="arm_lift_link"/>
     <dynamics damping="1.0"/>
