@@ -622,7 +622,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <geometry>
         <mesh filename="package://hsr_meshes/meshes/arm_v0/arm_flex_light.dae"/>
       </geometry>
-      <material name="yellow"/>
+      <material name="green"/>
     </visual>
     <collision>
       <geometry>
@@ -738,7 +738,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <geometry>
         <mesh filename="package://hsr_meshes/meshes/wrist_v0/wrist_roll.dae"/>
       </geometry>
-      <material name="blue"/>
+      <material name="yellow"/>
     </visual>
     <collision>
       <geometry>
