@@ -357,7 +357,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <joint name="head_pan_joint" type="revolute">
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     <axis xyz="0.0 0.0 1.0"/>
-    <limit effort="100.0" lower="-1.5707963268" upper="1.5707963268" velocity="1.0"/>
+    <limit effort="100.0" lower="-3.14159265359" upper="3.14159265359" velocity="1.0"/>
     <parent link="torso_lift_link"/>
     <child link="head_pan_link"/>
     <dynamics damping="1.0"/>
