@@ -47,6 +47,15 @@ POSSIBILITY OF SUCH DAMAGE.
   <material name="white">
     <color rgba="1.0 1.0 1.0 1.0"/>
   </material>
+  <material name="green">
+    <color rgba="0.0 1.0 0.0 1.0"/>
+  </material>
+  <material name="blue">
+    <color rgba="0.0 0.0 1.0 1.0"/>
+  </material>
+  <material name="yellow">
+    <color rgba="1.0 1.0 0.0 1.0"/>
+  </material>
   <material name="tablet">
     <color rgba="0.1 0.1 0.2 1.0"/>
   </material>
@@ -613,7 +622,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <geometry>
         <mesh filename="package://hsr_meshes/meshes/arm_v0/arm_flex_light.dae"/>
       </geometry>
-      <material name="white"/>
+      <material name="yellow"/>
     </visual>
     <collision>
       <geometry>
@@ -639,7 +648,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <geometry>
         <mesh filename="package://hsr_meshes/meshes/arm_v0/arm_roll_light.dae"/>
       </geometry>
-      <material name="white"/>
+      <material name="green"/>
     </visual>
     <collision>
       <geometry>
@@ -729,7 +738,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <geometry>
         <mesh filename="package://hsr_meshes/meshes/wrist_v0/wrist_roll.dae"/>
       </geometry>
-      <material name="white"/>
+      <material name="blue"/>
     </visual>
     <collision>
       <geometry>
